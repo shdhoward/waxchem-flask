@@ -16,22 +16,32 @@ def home():
         year=datetime.now().year,
     )
 
-@app.route('/contact')
+@app.route('/mdhdb')
 def contact():
     """Renders the contact page."""
     return render_template(
-        'contact.html',
-        title='Contact',
+        'mdhdb.html',
+        title='MDHDB',
         year=datetime.now().year,
-        message='Your contact page.'
+        message='MDHDB page.'
     )
 
-@app.route('/about')
+@app.route('/surface')
 def about():
     """Renders the about page."""
     return render_template(
-        'about.html',
-        title='About',
+        'surface.html',
+        title='Surface samples',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='Surface samples page.'
+    )
+
+@app.route('/collars')
+def collars():
+
+    return render_template(
+        'collars.html',
+        title='Collars',
+        year=datetime.now().year,
+        message='Collars page.'
     )

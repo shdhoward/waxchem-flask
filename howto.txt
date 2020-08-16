@@ -1,0 +1,34 @@
+https://abouconde.com/2019/04/09/create-a-local-git-repository-in-visual-studio-2019/
+
+VS2019
+File > New > Repository
+
+Created solution under new repo 
+C:\_DEVSTUFF\repos\waxchem-flask
+
+Made new repo in github
+https://github.com/shdhoward/waxchem-flask.git
+
+GitBash>
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos
+$ cd waxchem-flask
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos/waxchem-flask (master)
+$ git add .
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos/waxchem-flask (master)
+$ git config user.email "shdhoward@gmail.com"
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos/waxchem-flask (master)
+$ git commit
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos/waxchem-flask (master)
+$ git remote add origin https://github.com/shdhoward/waxchem-flask.git
+fatal: remote origin already exists.
+
+shdho@Nitro5 MINGW64 /c/_DEVSTUFF/repos/waxchem-flask (master)
+$ git push -u origin master
+
+(make changes)
+
