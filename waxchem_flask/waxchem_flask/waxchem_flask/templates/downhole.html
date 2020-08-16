@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<p>Use this area to provide additional information.</p>
+<table>
+    {% for item in data %}
+    <tr>
+        {% for i in range(0,10) %}
+        <td class=" spaced">{{item[i]}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
+    <!--#for row in cursor:
+    #    s = s + "<tr>
+    "
+    #    for x in row:
+    #        s = s + "
+    <td>" + str(x) + "</td>"
+    #s = s + "
+</tr>"-->  

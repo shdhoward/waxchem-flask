@@ -1,4 +1,9 @@
 https://abouconde.com/2019/04/09/create-a-local-git-repository-in-visual-studio-2019/
+https://azuredevopslabs.com/labs/devopsserver/github/
+https://www.jerriepelser.com/blog/using-ngrok-with-aspnet-core/
+
+
+
 
 VS2019
 File > New > Repository
@@ -32,3 +37,6 @@ $ git push -u origin master
 
 (make changes)
 
+
+
+Commit and push via TEam Explorer in VS

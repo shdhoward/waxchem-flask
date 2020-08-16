@@ -40,3 +40,15 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+td {
+    padding: 8px;
+    background-color: #eee;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+}
+
+td.spaced {
+        margin-left: 10px;
+    }
