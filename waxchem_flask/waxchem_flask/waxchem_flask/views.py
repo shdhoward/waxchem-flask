@@ -5,7 +5,7 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import render_template
 from waxchem_flask import app
-import pypyodbc  
+import pyodbc  
 
 @app.route('/')
 @app.route('/home')
@@ -32,17 +32,12 @@ def collars():
     """Renders the downhole page."""
 
     ## creating connection Object which will contain SQL Server Connection    
-    connection = pypyodbc.connect('Driver={SQL Server};Server=nitro5;Database=drillholes;Trusted_Connection=yes; ')# Creating Cursor    
-    
+    #connection = pyodbc.connect('Driver={SQL Server};Server=nitro5;Database=drillholes;Trusted_Connection=yes; ')# Creating Cursor    
+    connection = pyodbc.connect('Driver={SQL Server};Server=sqld\dev;Database=drillholes;Trusted_Connection=yes; ')# Creating Cursor    
+ 
     cursor = connection.cursor()    
     cursor.execute("SELECT top 15 * FROM Collar")    
     data = cursor.fetchall()
-    #s = "<table style='border:1px solid red'>"    
-    #for row in cursor:    
-    #    s = s + "<tr>"    
-    #    for x in row:    
-    #        s = s + "<td>" + str(x) + "</td>"    
-    #s = s + "</tr>"    
     connection.close() 
 
     return render_template(
